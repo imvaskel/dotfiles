@@ -1,0 +1,144 @@
+format = "[](fg:blue)$username$hostname[](fg:blue bg:pink)$directory[](fg:pink bg:white)$git_branch$git_commit$git_state$git_status[ ](bg:white)[](fg:white bg:pink)$c$cmake$dart$deno$dotnet$elixir$erlang$golang$haskell$java$kotlin$lua$nodejs$python$ruby$rust$swift$package[ ](bg:pink)[](fg:pink bg:pink)$cmd_duration[ ](bg:pink)$nix_shell[](bg:#pink)[](fg:pink bg:blue)$time[](fg:blue)\n$character"
+palette = "trans-gruvbox"
+[c]
+format = "[ $symbol($version(-$name))]($style)"
+style = "bg:pink fg:foreground"
+
+[character]
+error_symbol = " [✘](bold red) "
+success_symbol = " [❯](fg:white) "
+
+[cmake]
+format = "[ $symbol($version)]($style)"
+style = "bg:pink fg:foreground"
+
+[cmd_duration]
+format = "[ $duration]($style)"
+style = "bg:pink fg:foreground"
+
+[dart]
+format = "[ $symbol($version)]($style)"
+style = "bg:pink fg:foreground"
+
+[deno]
+format = "[ $symbol($version)]($style)"
+style = "bg:pink fg:foreground"
+
+[directory]
+format = "[ $path ]($style)"
+style = "bg:pink fg:foreground"
+truncation_length = 5
+truncation_symbol = "…/"
+
+[dotnet]
+format = "[ $symbol($version)( 🎯$tfm)]($style)"
+style = "bg:pink fg:foreground"
+
+[elixir]
+format = "[ $symbol($version \\(OTP $otp_version\\))]($style)"
+style = "bg:pink fg:foreground"
+
+[erlang]
+format = "[ $symbol($version)]($style)"
+style = "bg:pink fg:foreground"
+
+[git_branch]
+format = "[ $symbol $branch(:$remote_branch)]($style)"
+style = "bg:white fg:foreground"
+symbol = ""
+
+[git_commit]
+format = "[ \\($hash$tag\\)]($style)"
+style = "bg:white fg:foreground"
+tag_symbol = " "
+
+[git_state]
+format = "[$state ($progress_current/$progress_total)]($style)"
+style = "bg:white fg:foreground"
+
+[git_status]
+format = "[($all_status$ahead_behind)]($style)"
+style = "bg:white fg:foreground"
+
+[golang]
+format = "[ $symbol($version)]($style)"
+style = "bg:pink fg:foreground"
+
+[haskell]
+format = "[ $symbol($version)]($style)"
+style = "bg:pink fg:foreground"
+
+[hostname]
+format = "[uf178  ssh: $hostname ]($style)"
+style = "bg:blue fg:foreground"
+
+[java]
+format = "[ $symbol($version)]($style)"
+style = "bg:pink fg:foreground"
+
+[kotlin]
+format = "[ $symbol($version)]($style)"
+style = "bg:pink fg:foreground"
+
+[lua]
+format = "[ $symbol($version)]($style)"
+style = "bg:pink fg:foreground"
+
+[nix_shell]
+format = "[via $symbol]($style)"
+style = "bg:pink fg:foreground"
+
+[nodejs]
+format = "[ $symbol($version)]($style)"
+style = "bg:pink fg:foreground"
+
+[package]
+format = "[ $symbol($version)]($style)"
+style = "bg:pink fg:foreground"
+
+[palettes.pastel-enby]
+foreground = "#000000"
+purple = "#A25BB1"
+white = "#DAD1D2"
+yellow = "#E1C269"
+
+[palettes.trans]
+blue = "#5BCEFA"
+foreground = "#000000"
+pink = "#F5A9B8"
+white = "#FFFFFF"
+
+[palettes.trans-gruvbox]
+blue = "#7DAEA3"
+foreground = "#000000"
+pink = "#d3869b"
+red = "#ea6962"
+white = "#ddc7a1"
+
+[python]
+format = "[ ${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\))]($style)"
+style = "bg:pink fg:foreground"
+
+[ruby]
+format = "[ $symbol($version)]($style)"
+style = "bg:pink fg:foreground"
+
+[rust]
+format = "[ $symbol($version)]($style)"
+style = "bg:pink fg:foreground"
+
+[swift]
+format = "[ $symbol($version)]($style)"
+style = "bg:pink fg:foreground"
+
+[time]
+disabled = false
+format = "[ ♥ $time ]($style)"
+style = "bg:blue fg:foreground"
+time_format = "%I:%M %P"
+
+[username]
+format = "[$user ]($style)"
+show_always = true
+style_root = "bg:blue fg:foreground"
+style_user = "bg:blue fg:foreground"
