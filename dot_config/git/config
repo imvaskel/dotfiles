@@ -8,7 +8,7 @@
 [core]
 	autoclrf = false
 	ignorecase = true
-	pager = "/nix/store/84mrcjwm7kghj0i46lyic7mww1avc4y9-delta-0.18.2/bin/delta"
+	pager = "delta"
 
 [delta]
 	navigate = true
@@ -23,7 +23,7 @@
 	defaultBranch = "main"
 
 [interactive]
-	diffFilter = "/nix/store/84mrcjwm7kghj0i46lyic7mww1avc4y9-delta-0.18.2/bin/delta --color-only"
+	diffFilter = "delta --color-only"
 
 [merge]
 	conflictstyle = "diff3"
