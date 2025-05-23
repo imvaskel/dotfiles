@@ -93,6 +93,12 @@ return {
         opts = {
             keys = 'etovxqpdygfblzhckisuran'
         }
+    },
+
+    {
+        'IogaMaster/neocord',
+        event = "VeryLazy",
+        opts = {}
     }
 
 }
