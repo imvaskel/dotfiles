@@ -5,26 +5,17 @@ local opts = {
     silent = true,
 }
 
--- SECTION: All
-local hop = require('hop')
-local directions = require('hop.hint').HintDirection
-vim.keymap.set('', 'f', function()
-  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
-end, {remap=true})
-vim.keymap.set('', 'F', function()
-  hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
-end, {remap=true})
-vim.keymap.set('', 't', function()
-  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
-end, {remap=true})
-vim.keymap.set('', 'T', function()
-  hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
-end, {remap=true})
-
 -- SECTION: Insert Mode
 set('i', 'jk', '<Esc>', opts)
 
+set('i', '<Tab>', [[pumvisible() ? "\<C-n>" : "\<Tab>"]], { expr = true })
+set('i', '<S-Tab>', [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], { expr = true })
+
 -- Section: Normal Mode
+
+-- Yoink, paste
+set('n', 'gY', '"+Y', opts)
+set('n', 'gP', '"+P', opts)
 
 -- Clipboard stuffs
 set({ 'n', 'v' }, '<Leader>p', '"+p', opts)

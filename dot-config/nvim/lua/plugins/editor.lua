@@ -21,27 +21,28 @@ return {
         }
     },
 
-    -- Surround (better than mini.surround)
-    {
-        'kylechui/nvim-surround',
-        version = '^3.0.0',
-        event = 'VeryLazy',
-        opts = {
-            ['keymaps'] = {
-                ['change'] = 'gzr',
-                ['change_line'] = 'gZR',
-                ['delete'] = 'gzd',
-                ['insert'] = '<C-g>z',
-                ['insert_line'] = '<C-g>Z',
-                ['normal'] = 'gz',
-                ['normal_cur'] = 'gZ',
-                ['normal_cur_line'] = 'gZZ',
-                ['normal_line'] = 'gzz',
-                ['visual'] = 'gz',
-                ['visual_line'] = 'gZ'
-            }
-        }
-    },
+    -- me when i lie maybe perhaps probably
+    -- -- Surround (better than mini.surround)
+    -- {
+    --     'kylechui/nvim-surround',
+    --     version = '^3.0.0',
+    --     event = 'VeryLazy',
+    --     opts = {
+    --         ['keymaps'] = {
+    --             ['change'] = 'gzr',
+    --             ['change_line'] = 'gZR',
+    --             ['delete'] = 'gzd',
+    --             ['insert'] = '<C-g>z',
+    --             ['insert_line'] = '<C-g>Z',
+    --             ['normal'] = 'gz',
+    --             ['normal_cur'] = 'gZ',
+    --             ['normal_cur_line'] = 'gZZ',
+    --             ['normal_line'] = 'gzz',
+    --             ['visual'] = 'gz',
+    --             ['visual_line'] = 'gZ'
+    --         }
+    --     }
+    -- },
 
     -- Makes cursor a little nicer
     { 'ya2s/nvim-cursorline',    version = '*' },
@@ -72,28 +73,26 @@ return {
         'echasnovski/mini.nvim',
         version = '*',
         config = function()
-            require('mini.basics').setup({})
-            require('mini.comment').setup({})
-            require('mini.hipatterns').setup({})
-            require('mini.fuzzy').setup({})
-            require('mini.move').setup({})
-            require('mini.notify').setup({})
-            require('mini.pairs').setup({})
-            require('mini.statusline').setup({})
+            require('mini.basics').setup()
+            require('mini.comment').setup()
+            require('mini.completion').setup()
+            require('mini.fuzzy').setup()
+            require('mini.hipatterns').setup()
+            require('mini.icons').setup()
+            require('mini.jump2d').setup()
+            require('mini.move').setup()
+            require('mini.notify').setup()
+            require('mini.pairs').setup()
+            require('mini.statusline').setup()
+            require('mini.surround').setup()
         end
     },
 
     -- gitsigns
     { 'lewis6991/gitsigns.nvim', version = '*' },
 
-    -- hop and leap
-    {
-        'smoka7/hop.nvim',
-        version = "*",
-        opts = {
-            keys = 'etovxqpdygfblzhckisuran'
-        }
-    },
+    -- Easier to read
+    { 'hiphish/rainbow-delimiters.nvim', version = '*'},
 
     {
         'IogaMaster/neocord',
