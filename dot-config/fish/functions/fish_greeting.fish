@@ -1,5 +1,5 @@
 function fish_greeting
-    if test $SHLVL -eq 1
+    if command -q cbonsai && test $SHLVL -eq 1
         cbonsai -p
     end
 
