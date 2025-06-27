@@ -1,4 +1,14 @@
-format = "[](fg:blue)$username$hostname[](fg:blue bg:pink)$directory[](fg:pink bg:white)$git_branch$git_commit$git_state$git_status[ ](bg:white)[](fg:white bg:pink)$c$cmake$dart$deno$dotnet$elixir$erlang$golang$haskell$java$kotlin$lua$nodejs$python$ruby$rust$swift$package[ ](bg:pink)[](fg:pink bg:pink)$cmd_duration[ ](bg:pink)$nix_shell[](bg:#pink)[](fg:pink bg:blue)$time[](fg:blue)\n$character"
+format = """
+[](fg:blue)$username$hostname\
+[](fg:blue bg:pink)$directory\
+[](fg:pink bg:white)$git_branch$git_commit$git_state$git_status[ ](bg:white)\
+[](fg:white bg:pink)$c$cmake$dart$deno$dotnet$elixir$erlang$golang$haskell$java$kotlin$lua$nodejs$python$ruby$rust$swift$package[ ](bg:pink)\
+[](fg:pink bg:pink)$cmd_duration\
+[ ](bg:pink)$nix_shell[](bg:#pink)\
+[](fg:pink bg:blue)$time\
+[](fg:blue)
+$character
+"""
 palette = "trans-gruvbox"
 [c]
 format = "[ $symbol($version(-$name))]($style)"
