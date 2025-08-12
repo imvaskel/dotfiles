@@ -79,7 +79,7 @@ format = "[ $symbol($version)]($style)"
 style = "bg:pink fg:foreground"
 
 [hostname]
-format = "[uf178  ssh: $hostname ]($style)"
+format = "[@ ssh: $hostname ]($style)"
 style = "bg:blue fg:foreground"
 
 [java]
