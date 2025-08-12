@@ -16,6 +16,8 @@
     zoxide init fish --cmd cd | source
     starship init fish | source
     enable_transience
+
+    fish_add_path "~/.local/bin"
     
 
 end
