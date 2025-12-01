@@ -35,7 +35,7 @@ set('n', '<S-Tab>', '<cmd>tabprev<CR>', opts)
 -- LSP stuffs
 set('n', '<Leader>lh', vim.lsp.buf.hover, opts)
 -- This can be used for both, by default it'll use the visual selection (if applicable)
-set({ 'n', 'v' }, '<Leader>lf', vim.lsp.buf.format, opts)
+set({ 'n', 'v' }, '<Leader>lf', require("conform").format, opts)
 
 -- Telescope stuffs
 local builtin = require('telescope.builtin')
