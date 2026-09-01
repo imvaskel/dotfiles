@@ -1,23 +1,29 @@
- if status is-interactive; 
+ if status is-interactive;
 
-    # Aliases
-    alias eza 'eza --icons auto --git -g'
-    alias la 'eza -a'
-    alias ll 'eza -l'
-    alias lla 'eza -la'
-    alias ls eza
-    alias lt 'eza --tree'
+    if command -q eza;
+        alias eza 'eza --icons auto --git -g'
+        alias la 'eza -a'
+        alias ll 'eza -l'
+        alias lla 'eza -la'
+        alias ls eza
+        alias lt 'eza --tree'
+    end
 
-    fzf --fish | source
+    if command -q fzf;
+        fzf --fish | source
+        set -U FZF_LEGACY_KEYBINDINGS 0
+    end
 
-    set -U FZF_LEGACY_KEYBINDINGS 0
+
+    if command -q zoxide;
+        zoxide init fish --cmd cd | source
+    end
+    if command -q starship; then
+        starship init fish | source
+        enable_transience
+    end
+
+
     bind \t complete pager-toggle-search
-
-    zoxide init fish --cmd cd | source
-    starship init fish | source
-    enable_transience
-
     fish_add_path "~/.local/bin"
-    
-
 end
