@@ -18,7 +18,7 @@
     if command -q zoxide;
         zoxide init fish --cmd cd | source
     end
-    if command -q starship; then
+    if command -q starship; 
         starship init fish | source
         enable_transience
     end
